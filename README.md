@@ -1,8 +1,8 @@
 # frontend-npm-goodies
 
-Lessons/examples for creative coding, rapid prototyping, and front-end development in JS. Encourages modern practices like modularity, promises, ES6, etc.
+Lessons/examples for creative coding, rapid prototyping, and front-end development in JS. Encourages modern practices like modularity, promises, functional programming, ES6, etc.
 
-This is still a work in progress. Check back soon for some automation and distribution on gh-pages.
+This is still a work in progress. Check back soon for live demos. 
 
 ## running demos
 
