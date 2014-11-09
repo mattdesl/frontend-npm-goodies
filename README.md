@@ -8,8 +8,10 @@ This is still a work in progress. Check back soon for live demos.
 
 To run any of the demos:
 
-1. `npm install`
-2. `npm run [demo]`
+1. `git clone https://github.com/mattdesl/frontend-npm-goodies.git`
+2. `cd frontend-npm-goodies`
+3. `npm install`
+4. `npm run [demo]`
 
 List:
 
