@@ -2,11 +2,18 @@
 
 Lessons/examples for creative coding, rapid prototyping, and front-end development with npm in JS. Encourages modern practices like modularity, promises, functional programming, ES6, etc.
 
-This is still a work in progress. Check back soon for live demos. 
+This is still a work in progress. More goodies coming soon.
+
+## live demos
+
+Some of the demos will be published to RequireBin so you can easily jump in and edit them.
+
+[canvas-collision](http://requirebin.com/?gist=2af8e18dae0111886aa1)
+[image-palette](http://requirebin.com/?gist=1f49e56f22fa9caa94d7)
 
 ## running demos
 
-To run any of the demos:
+To run any of the demos from source:
 
 1. `git clone https://github.com/mattdesl/frontend-npm-goodies.git`
 2. `cd frontend-npm-goodies`
