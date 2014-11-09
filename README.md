@@ -8,8 +8,8 @@ This is still a work in progress. More goodies coming soon.
 
 Some of the demos will be published to RequireBin so you can easily jump in and edit them.
 
-[canvas-collision](http://requirebin.com/?gist=2af8e18dae0111886aa1)
-[image-palette](http://requirebin.com/?gist=1f49e56f22fa9caa94d7)
+- [canvas-collision](http://requirebin.com/?gist=2af8e18dae0111886aa1)
+- [image-palette](http://requirebin.com/?gist=1f49e56f22fa9caa94d7)
 
 ## running demos
 
