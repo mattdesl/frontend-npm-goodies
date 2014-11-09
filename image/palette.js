@@ -15,7 +15,7 @@ require('domready')(function() {
 
         //get the 5 prominent colors from our image
         var count = 5
-        var p = palette(pixels(img), img.width, count)
+        var p = palette(pixels(img), count)
 
         //render the colors
         render(p, img.width/count)
