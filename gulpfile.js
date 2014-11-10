@@ -4,9 +4,11 @@ var source = require('vinyl-source-stream')
 var watchify = require('watchify')
 var livereload = require('gulp-livereload')
 var connect = require('gulp-connect')
+var uglify = require('gulp-uglify')
 var browserify = require('browserify')
 var xtend = require('xtend')
 var format = require('format-text')
+var streamify = require('gulp-streamify')
 var fs = require('fs')
 
 var demos = require('./demos')
@@ -87,7 +89,7 @@ function bundle(entry, out, watch, transforms) {
     b.add('./'+entry)
     if (transforms) 
         transforms.forEach(function(t) { b.transform(t) })
- 
+    
     function doBundle() {
         var p = b.bundle()
             .on('error', function(e) {
@@ -95,7 +97,12 @@ function bundle(entry, out, watch, transforms) {
                 gutil.log( gutil.colors.red('Bundle error: ',e.message) )
             })
             .pipe(source(out))
-            .pipe(gulp.dest('./dist/js'))
+        
+        if (!watch)
+            p = p.pipe(streamify(uglify({ mangle: true, compress: true })))
+
+        p = p.pipe(gulp.dest('./dist/js'))
+
         if (watch)
             p = p.pipe(livereload())
         return p
