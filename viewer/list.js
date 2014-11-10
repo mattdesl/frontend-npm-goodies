@@ -11,7 +11,7 @@ var path = require('path')
 
 function render(item) {
     item.link = item.outfile || (item.folder+'-'+item.name)
-    item.url = urljoin('/', path.basename(item.link, '.html')+'.html')
+    item.url = path.basename(item.link, '.html')+'.html'
     item.src = source(item)
     return template(item)
 }
