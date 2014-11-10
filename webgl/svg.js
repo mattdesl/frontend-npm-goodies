@@ -1,5 +1,4 @@
 var background = require('gl-checker-background')
-var rgb = require('./luma-to-rgb')
 
 //get the triangulated svg mesh
 var mesh = require('./svg-mesh')()
