@@ -6,7 +6,11 @@ This is still a work in progress. More goodies coming soon.
 
 ## live demos
 
-Some of the demos will be published to RequireBin so you can easily jump in and edit them.
+You can run any of the demos here:  
+
+http://mattdesl.github.io/frontend-npm-goodies/dist/
+
+Some of the demos will also be published to RequireBin so you can easily jump in and edit them.
 
 - [canvas-collision](http://requirebin.com/?gist=2af8e18dae0111886aa1)
 - [image-palette](http://requirebin.com/?gist=1f49e56f22fa9caa94d7)
@@ -18,16 +22,19 @@ To run any of the demos from source:
 1. `git clone https://github.com/mattdesl/frontend-npm-goodies.git`
 2. `cd frontend-npm-goodies`
 3. `npm install`
-4. `npm run [demo]`
 
-List:
+Now you can either bundle all of the files with `gulp`, or you can run it in dev (watch) mode on a single file like so:
+
+```gulp watch --demo canvas-collision```
+
+Where the format is `[folder]-[filename]`. Examples:
 
 ```
-npm run image-animation
-npm run image-palette
-npm run image-preloader
-npm run image-preloader-es6
-npm run canvas-collision
+gulp watch --demo image-animation
+gulp watch --demo image-palette
+gulp watch --demo image-preloader
+gulp watch --demo image-preloader-es6
+gulp watch --demo canvas-collision
 ```
 
 ## License

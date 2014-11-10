@@ -52,13 +52,7 @@
     "xtend": "^4.0.0"
   },
   "scripts": {
-    "test": "node test.js",
-    "canvas-collision": "beefy canvas/collision.js --open",
-    "image-animation": "beefy image/animation.js --cwd image --open -- -t 6to5-browserify -t brfs",
-    "image-preloader": "beefy image/preloader.js --cwd image --open -- -t brfs",
-    "image-palette": "beefy image/palette.js --open",
-    "image-preloader-es6": "beefy image/preloader-es6.js --cwd image --open -- -t 6to5-browserify -t brfs",
-    "viewer": "beefy viewer/index.js --cwd viewer --open -- -t hbsfy -t 6to5-browserify -t lessify"
+    "test": "node test.js"
   },
   "keywords": [
     "npm",
