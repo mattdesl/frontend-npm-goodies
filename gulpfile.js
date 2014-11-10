@@ -21,7 +21,7 @@ if (gutil.env.demo) {
     gutil.env.d = s.slice(1).join('-')
 }
 
-gulp.task('bundle', function(){
+gulp.task('dev', function(){
     if (typeof gutil.env.f !== 'string' && typeof gutil.env.d !== 'string')
         return gutil.log(gutil.colors.red('Must specify a demo!'))
 
@@ -35,10 +35,10 @@ gulp.task('production', function(cb) {
     }, cb)
 })
 
-gulp.task('watch', ['bundle'], function(){
+gulp.task('watch', ['dev'], function(){
     connect.server({
         port: 8000,
-        root: 'app'
+        root: 'dist'
     })
     livereload.listen(35729)
 });
@@ -58,6 +58,13 @@ gulp.task('html', function(cb) {
         cb()
 })
 
+gulp.task('copy', function() {
+    return gulp.src(['image/icons/**'])
+        .pipe(gulp.dest('dist/icons'))
+})
+
+gulp.task('default', ['html', 'copy', 'production'])
+
 function bundleFilename(d) {
     return 'bundle-'+d.folder+'-'+d.name+'.js'
 }
@@ -73,6 +80,8 @@ function bundle(entry, out, watch, transforms) {
     var b = watch ? watchify(browserify(args)) : browserify()
     b.on('update', doBundle)
     b.add('./'+entry)
+    if (transforms) 
+        transforms.forEach(function(t) { b.transform(t) })
  
     function doBundle() {
         var p = b.bundle()
