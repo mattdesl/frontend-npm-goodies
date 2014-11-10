@@ -1,0 +1,108 @@
+.content {
+    margin-bottom: 20px;
+}
+
+@desktop: ~"only screen and (min-width: 950px) and (max-width: 1128px)";
+@mobile: ~"only screen and (min-device-width : 320px) and (max-device-width : 480px)";
+
+body {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 14px;
+    padding: 0;
+
+    max-width: 600px;
+    text-align: center;
+    margin: 50px auto;
+    @media @mobile {
+        margin: 20px;
+        text-align: left;
+        max-width: 100%;   
+    }
+}
+
+#main {
+    background: #ECECEC;
+    padding: 20px;
+}
+
+p, a, div {
+    padding: 0;
+    text-align: left;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+a, a:visited {
+    color: #4687a9;
+    text-decoration: none;
+    .transition();
+}
+
+a:hover {
+    color: #40a4d8;
+    background: #e3e3e3;
+    .transition(all, 0.1s);
+
+    @media @mobile {
+        background: inherit;
+        color: inherit;
+    }
+}
+
+.demo-item > a {    
+    display: inline-block;
+    width: 150px;
+
+    @media @mobile {
+        display: block;
+        width: auto;
+    }
+    position: relative;
+}
+
+.demo-item > a:hover {
+    padding-right: 20px;    
+    @media @mobile {
+        padding-right: 0px;    
+    }
+}
+
+.demo-item {
+    margin-bottom: 0px;
+    @media @mobile {
+        margin-bottom: 10px;
+    }
+}
+
+.demo-item > a::after {
+    display: inline-block;
+    @media @mobile {
+        display: none;
+    }
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 10px;
+    height: 1px;
+    background: #d6d6d6;
+}
+
+.info {
+    text-align: left;
+    display: inline-block;
+}
+
+.transition(@kind:all, @duration:0.2s, @ease:ease-out) {
+  -webkit-transition: @kind @duration @ease;
+  -moz-transition: @kind @duration @ease;
+  -o-transition: @kind @duration @ease;
+  transition: @kind @duration @ease;
+}

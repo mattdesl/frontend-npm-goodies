@@ -1,17 +1,13 @@
-var items = require('../demos')
-var template = require('./item.hbs')
+//setup styles
+require('./style.less')
+
 var domify = require('domify')
-require('domready')(function() {
+var template = require('./content.hbs')
+var createList = require('./list')
 
-    items.map(render)
-        .forEach( function(e) { document.body.appendChild(domify(e))}  )
+require('domready')(() => {
+    var container = document.body.appendChild(domify('<div id="main">'))
+
+    container.appendChild( domify(template()) )
+    createList(container)
 })
-
-
-var urljoin = require('url-join')
-
-function render(item) {
-    item.link = urljoin(item.folder, item.name)
-    item.url = urljoin('/', item.link)+'.js'
-    return template(item)
-}

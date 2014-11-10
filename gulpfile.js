@@ -46,13 +46,18 @@ gulp.task('watch', ['dev'], function(){
 gulp.task('html', function(cb) {
     demos.forEach(function(d) {
         var jsFile = bundleFilename(d)
-        var doc = format(htmlTemplate, xtend({
+        var demoTemplate = htmlTemplate
+        if (d.template) 
+            demoTemplate = fs.readFileSync(d.template, 'utf8')
+
+        var doc = format(demoTemplate, xtend({
             title: d.name,
             entry: 'js/'+jsFile
         }, d))
 
         var f = 'dist/'
-        fs.writeFileSync(path.join(f, d.folder+'-'+d.name+'.html'), doc)
+        var outfile = d.outfile || (d.folder+'-'+d.name+'.html')
+        fs.writeFileSync(path.join(f, outfile), doc)
     })
     if (cb)
         cb()
