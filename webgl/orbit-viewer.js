@@ -1,10 +1,12 @@
-var clear = require('gl-clear')()
 var createBackground = require('gl-vignette-background')
 var createShader = require('gl-basic-shader')
 var createGeometry = require('gl-geometry')
 var createCamera = require('canvas-orbit-camera')
-var mat4 = require('gl-mat4')
 var createApp = require('canvas-testbed')
+
+var mat4 = require('gl-mat4')
+
+var clear = require('gl-clear')()
 var touch = require('touch-position')()
 
 //A simple WebGL scene 
@@ -28,7 +30,6 @@ module.exports = function(complex, opt) {
         background,
         angle = 0
 
-    // var wires = wireframe(complex.cells)
 
     function render(gl, width, height, dt) {
         clear(gl)
@@ -72,6 +73,7 @@ module.exports = function(complex, opt) {
         geometry.unbind()
     }
 
+    //called on domready
     function start(gl, width, height) {
         camera = createCamera(gl.canvas)
         shader = createShader(gl)
