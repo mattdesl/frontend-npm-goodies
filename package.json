@@ -1,6 +1,6 @@
 {
   "name": "frontend-npm-goodies",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "examples of frontend npm uses",
   "main": "index.js",
   "license": "MIT",
