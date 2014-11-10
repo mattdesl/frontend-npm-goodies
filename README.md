@@ -22,7 +22,7 @@ To run any of the demos from source:
 1. `git clone https://github.com/mattdesl/frontend-npm-goodies.git`
 2. `cd frontend-npm-goodies`
 3. `npm install`
-4. `gulp` (might take a while)
+4. `npm run build` (might take a while)
 
 For development of single modules, you can watch and enable debug bundles like so:  
 
