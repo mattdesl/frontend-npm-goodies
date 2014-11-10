@@ -1,4 +1,3 @@
-var rgb = require('./luma-to-rgb')
 var createVignette = require('gl-vignette-background')
 var wireframe = require('gl-wireframe')
 var bunny = require('bunny')
@@ -24,5 +23,9 @@ function background(gl) {
         coloredNoise: false,
         scale: [1.15, 1.15]
     })
+}
+
+function rgb(gray) {
+    return [gray/255, gray/255, gray/255]
 }
 
