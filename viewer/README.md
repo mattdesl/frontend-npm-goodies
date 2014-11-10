@@ -1,0 +1,1 @@
+The demo viewer can also be seen as a short example of a static site. 

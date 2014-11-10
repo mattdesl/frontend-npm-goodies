@@ -24,16 +24,29 @@
     "get-rgba-palette": "^1.0.2",
     "gsap": "^1.14.2",
     "gsap-promise": "^1.3.1",
+    "handlebars": "^1.3.0",
+    "hbsfy": "^2.2.0",
     "img": "^1.0.0",
     "insert-css": "^0.2.0",
+    "lessify": "^0.4.1",
     "quantize": "^1.0.1",
     "touch-position": "^1.0.2",
     "triangle-circle-collision": "^1.0.4",
-    "url-join": "0.0.1"
+    "url-join": "0.0.1",
+    "xtend": "^4.0.0"
   },
   "devDependencies": {
     "beefy": "^2.1.1",
-    "browserify": "^5.11.2"
+    "browserify": "^5.11.2",
+    "format-text": "0.0.3",
+    "gulp": "^3.8.10",
+    "gulp-connect": "^2.2.0",
+    "gulp-livereload": "^2.1.1",
+    "gulp-util": "^3.0.1",
+    "indexof-property": "^1.1.1",
+    "vinyl-source-stream": "^1.0.0",
+    "watchify": "^2.1.0",
+    "xtend": "^4.0.0"
   },
   "scripts": {
     "test": "node test.js",
@@ -41,7 +54,8 @@
     "image-animation": "beefy image/animation.js --cwd image --open -- -t 6to5-browserify -t brfs",
     "image-preloader": "beefy image/preloader.js --cwd image --open -- -t brfs",
     "image-palette": "beefy image/palette.js --open",
-    "image-preloader-es6": "beefy image/preloader-es6.js --cwd image --open -- -t 6to5-browserify -t brfs"
+    "image-preloader-es6": "beefy image/preloader-es6.js --cwd image --open -- -t 6to5-browserify -t brfs",
+    "viewer": "beefy viewer/index.js --cwd viewer --open -- -t hbsfy -t 6to5-browserify -t lessify"
   },
   "keywords": [
     "npm",
