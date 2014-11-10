@@ -22,8 +22,9 @@ To run any of the demos from source:
 1. `git clone https://github.com/mattdesl/frontend-npm-goodies.git`
 2. `cd frontend-npm-goodies`
 3. `npm install`
+4. `npm run build` (might take a while)
 
-Now you can either bundle all of the files with `gulp`, or you can run it in dev (watch) mode on a single file like so:
+For development of single modules, you can watch and enable debug bundles like so:  
 
 ```gulp watch --demo canvas-collision```
 

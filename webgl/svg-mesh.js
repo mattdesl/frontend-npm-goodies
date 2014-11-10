@@ -1,4 +1,3 @@
-var contents = require('./data/svg.json')
 var parse = require('parse-svg-path')
 var triangulate = require('triangulate-contours')
 var normalize = require('normalize-path-scale')
@@ -7,7 +6,9 @@ var bounds = require('getboundingbox')
 var simplify = require('simplify-path')
 var flatten = require('flatten')
 
-module.exports = function(opt) {
+//takes in string contents from SVG path, and exports a 3D triangulated 
+//and simplified mesh, normalized to [-1.0 - 1.0] range
+module.exports = function(contents, opt) {
     opt = opt||{}
 
     var polylines = contours(parse(contents), 5)
