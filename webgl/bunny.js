@@ -1,6 +1,10 @@
-var createVignette = require('gl-vignette-background')
-var bunny = require('bunny')
 var rgb = require('./luma-to-rgb')
+var createVignette = require('gl-vignette-background')
+var wireframe = require('gl-wireframe')
+var bunny = require('bunny')
+
+//rejig the indices so that the wireframe looks good
+bunny.cells = wireframe(bunny.cells)
 
 //the bulk of the WebGL code is contained in the orbit-viewer
 require('./orbit-viewer')(bunny, {
