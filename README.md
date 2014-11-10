@@ -15,7 +15,7 @@ Some of the demos will also be published to RequireBin so you can easily jump in
 - [canvas-collision](http://requirebin.com/?gist=2af8e18dae0111886aa1)
 - [image-palette](http://requirebin.com/?gist=1f49e56f22fa9caa94d7)
 
-## running demos
+## building demos
 
 To run any of the demos from source:
 
