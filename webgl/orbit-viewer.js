@@ -1,4 +1,3 @@
-var createBackground = require('gl-vignette-background')
 var createShader = require('gl-basic-shader')
 var createGeometry = require('gl-geometry')
 var createCamera = require('canvas-orbit-camera')
