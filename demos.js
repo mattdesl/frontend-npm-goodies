@@ -6,7 +6,7 @@ module.exports = [
     { folder: 'canvas', name: 'collision', info: 'example of circle-triangle collision in real-time' },
 
     { folder: 'webgl', name: 'svg', info: 'svg triangulation & rendering in WebGL' },
-    { folder: 'webgl', name: 'bunny', info: 'the stanford bunny as a wireframe mesh' },
+    { folder: 'webgl', name: 'bunny', info: 'the Stanford bunny as a wireframe mesh' },
 
     { folder: 'viewer', 
         name: 'index', 

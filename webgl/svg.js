@@ -1,7 +1,9 @@
 var background = require('gl-checker-background')
 
+
 //get the triangulated svg mesh
-var mesh = require('./svg-mesh')()
+var contents = require('./data/svg.json')
+var mesh = require('./svg-mesh')(contents)
 
 var scale = 10
 require('./orbit-viewer')(mesh, {
