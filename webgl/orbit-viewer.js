@@ -75,7 +75,8 @@ module.exports = function(complex, opt) {
     //called on domready
     function start(gl, width, height) {
         camera = createCamera(gl.canvas)
-        shader = createShader(gl)
+        shader = typeof opt.shader === 'function' 
+            ? opt.shader(gl) : createShader(gl)
 
         //two geometries: one for filled, one for wireframe
         geometry = createGeometry(gl)
