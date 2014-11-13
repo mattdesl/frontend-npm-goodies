@@ -16,9 +16,10 @@ function render(item) {
     return template(item)
 }
 
-function append(e, parent) {
-    var el = (parent||document.body).appendChild(domify(e))
-    return el
+function append(parent) {
+    return function(e) {
+        return (parent||document.body).appendChild(e)
+    }
 }
 
 function source(d) {
@@ -29,11 +30,15 @@ function source(d) {
 module.exports = function(parent) {
     var elements = items
             .map(render)
-            .map( e => append(e, parent) )
+            .map(domify)
 
+    //animate each
     animate.staggerFromTo(elements, 0.5, {
         alpha: 0
     }, { 
         alpha: 1.0, delay: 0.1, ease: "easeOutQuad" 
     }, 0.03)
+
+    //add to dom
+    elements.forEach(append(parent))
 }

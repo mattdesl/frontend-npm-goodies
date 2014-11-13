@@ -1,6 +1,5 @@
 var background = require('gl-checker-background')
 
-
 //get the triangulated svg mesh
 var contents = require('./data/svg.json')
 var mesh = require('./svg-mesh')(contents)
