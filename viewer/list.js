@@ -30,7 +30,9 @@ function source(d) {
 module.exports = function(parent) {
     var elements = items
             .map(render)
-            .map(domify)
+            .map(function(t) {
+                return domify(t)
+            })
 
     //animate each
     animate.staggerFromTo(elements, 0.5, {

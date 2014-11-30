@@ -5,9 +5,12 @@ var domify = require('domify')
 var template = require('./content.hbs')
 var createList = require('./list')
 
-require('domready')(() => {
+var domready = require('domready')
+
+domready(function() {
     var container = document.body.appendChild(domify('<div id="main">'))
 
-    container.appendChild( domify(template()) )
+    var content = template()
+    container.appendChild( domify(content) )
     createList(container)
 })
